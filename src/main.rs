@@ -21,14 +21,34 @@ macro_rules! print {
     };
 }
 
-macro_rules! next {
-    ( $i: expr, $t: ty ) => {
-        $i.next().unwrap().parse::<$t>().unwrap()
+macro_rules! read_line {
+    ( $i: expr ) => {
+        $i.next().unwrap()
     };
 }
 
-fn solve(stdin: &str) {
-    let mut tk = stdin.split_whitespace();
+macro_rules! read {
+    ( $i: expr, $t: ty ) => {
+        read_line!($i).parse::<$t>().unwrap()
+    };
+}
+
+macro_rules! reads {
+    ( $i: expr, $t: ty ) => {
+        read_line!($i).split_whitespace().map(|i| i.parse::<$t>().unwrap()).collect()
+    };
+    ( $i: expr, $x:ty, $( $y: ty ), *) => {
+        {
+            let mut data = read_line!($i).split_whitespace();
+            (data.next().unwrap().parse::<$x>().unwrap(), $(
+                data.next().unwrap().parse::<$y>().unwrap()
+            )*,)
+        }
+    };
+}
+
+fn solve(_stdin: &str) {
+    let mut lines = _stdin.split('\n');
 }
  
 fn main() {
