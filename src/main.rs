@@ -41,8 +41,8 @@ macro_rules! reads {
         {
             let mut data = read_line!($i).split_whitespace();
             (data.next().unwrap().parse::<$x>().unwrap(), $(
-                data.next().unwrap().parse::<$y>().unwrap()
-            )*,)
+                data.next().unwrap().parse::<$y>().unwrap(), 
+            )*)
         }
     };
 }
