@@ -1,4 +1,4 @@
-fn find(tree: &mut Vec<usize>, u: usize) -> usize {
+pub fn find(tree: &mut Vec<usize>, u: usize) -> usize {
     if tree[u] == u {
         return u;
     } else {
