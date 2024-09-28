@@ -48,7 +48,7 @@ macro_rules! reads {
 }
 
 fn solve(_stdin: &str) {
-    let mut lines = _stdin.split('\n');
+    let mut line = _stdin.split('\n');
 }
  
 fn main() {
